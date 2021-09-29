@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: orange;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70vh 30vh;
+      grid-template-rows: 70vh 30vh;
+}
+
+.wrapper .firstHalf {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80vw 20vw;
+      grid-template-columns: 80vw 20vw;
+}
+
+.wrapper .firstHalf .mainStuff {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10vw 60vw;
+      grid-template-columns: 10vw 60vw;
+  place-content: center;
+  gap: 2em;
+}
+
+.wrapper .firstHalf .mainStuff .question, .wrapper .firstHalf .mainStuff .help {
+  margin-top: 60vh;
+  height: 10vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  border: 2px solid orange;
+}
+
+.wrapper .firstHalf .moneyCheck {
+  border: 2px solid orange;
+}
+
+.wrapper .secondHalf, .wrapper .answers {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.wrapper .secondHalf .answers {
+  -ms-grid-rows: (8vh)[2];
+      grid-template-rows: repeat(2, 8vh);
+  -ms-grid-columns: (25vw)[2];
+      grid-template-columns: repeat(2, 25vw);
+  gap: 3em;
+}
+
+.wrapper .secondHalf .answers > * {
+  cursor: pointer;
+  border: 2px solid orange;
+}
+/*# sourceMappingURL=main.css.map */

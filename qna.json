@@ -1,0 +1,19 @@
+{
+    "qna": {
+        "qna1": {
+          "question": "Jsi negr1",
+          "correctA": "negr1C",
+          "incorrectA1": "negr1I1",
+          "incorrectA2": "negr1I2",
+          "incorrectA3": "negr1I3"
+        },
+        "qna2": {
+          "question": "Jsi negr2",
+          "correctA": "negr1"
+        },
+        "qna3": {
+          "question": "Jsi negr3",
+          "correctA": "negr1"
+        }
+    }
+}
