@@ -4,8 +4,10 @@ let prizes = document.querySelectorAll('.moneyCheck > *');
 let fiftyFifty = document.querySelector('.fiftyFifty');
 let questsAndAns = [];
 let currentPrize = prizes.length;
-let hiddenVariable = "";
+let questionValue = "";
 let answersUsed = [0];
+let answersOnly = [];
+let won = false;
 
 const jsonToArray = (i) => {
   j = 0;
@@ -38,21 +40,24 @@ const checkIfUsed = (min, max) => {
       i = 0;
     }
   }
-  console.log(answersUsed)
   answersUsed.push(num)
   return num;
 }
 
 let qnaGen = () => {
   for (let i = 0; i < answers.length; i++) {
-    answers[i].innerText = questsAndAns[i];
+    answersOnly[i] = answers[i];
   }
-  hiddenVariable = questsAndAns[0]
+  shuffleArray(answersOnly);
+  for (let i = 0; i < answersOnly.length; i++) {
+    answersOnly[i].innerText = questsAndAns[i];
+  }
+  questionValue = questsAndAns[0]
   question.innerText = questsAndAns[4];
 }
 
 let checkAnswer = (answer, correctAnswer) => {
-  jsonToArray(checkIfUsed(1, 3));
+  jsonToArray(checkIfUsed(1, 10));
   qnaGen();
   if(answer == correctAnswer){
     currentPrize--;
@@ -63,21 +68,36 @@ let checkAnswer = (answer, correctAnswer) => {
 }
 
 let resetGame = () => {
-  answersUsed = [];
+  answersUsed = [0];
   currentPrize = prizes.length;
   prizes.forEach(element => {
     element.style.backgroundColor = ''
   });
 }
 
-let winningCondition = () => {
-  
+let winningConditionCheck = () => {
+  let winningNum = 9
+  if(!won) { winningNum = 10 };
+  if(answersUsed.length >= winningNum){
+    question.innerText = 'Vyhral jsi';
+    won = true;
+    setTimeout(function(){
+      resetGame();
+      qnaGen();
+    },
+    500)
+  }
+}
+
+let shuffleArray = (arr) => {
+  arr.sort(() => Math.random() - 0.5);
 }
 
 answers.forEach(element => {
   element.onclick = () => {
-    checkAnswer(element.innerText, hiddenVariable)
+    checkAnswer(element.innerText, questionValue);
+    winningConditionCheck();  
   }
 });
 
-window.onload = qnaGen, jsonToArray(checkIfUsed(1, 3)); 
+window.onload = qnaGen, jsonToArray(checkIfUsed(1, 10)); 
