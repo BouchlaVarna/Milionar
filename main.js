@@ -71,7 +71,7 @@ let resetGame = () => {
   answersUsed = [0];
   currentPrize = prizes.length;
   prizes.forEach(element => {
-    element.style.backgroundColor = ''
+    element.style.backgroundColor = '';
   });
 }
 
