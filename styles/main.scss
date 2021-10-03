@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$mainColor: black;
+$secondaryColor: orange;
+
+body{
+    background-color: $mainColor;
+    color: $secondaryColor;
+}
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70vh 30vh;
+
+    .firstHalf{
+        display: grid;
+        grid-template-columns: 80vw 20vw;
+
+        .question {
+            margin-top: 60vh;
+            height: 10vh;
+            display: grid;
+            place-content: center;
+            border: 2px solid $secondaryColor;
+            margin-left: 2vw;
+            margin-right: 2vw;
+        } 
+
+        .moneyCheck{
+            border: 2px solid $secondaryColor;
+        }
+    }
+    .secondHalf, .answers{
+        display: grid;
+        place-content: center;
+    }
+    .secondHalf{
+        .answers{
+            grid-template-rows: repeat(2, 8vh);
+            grid-template-columns: repeat(2, 25vw);
+            gap: 3em;
+
+            &>*{
+                cursor: pointer;
+                border: 2px solid $secondaryColor;
+            }
+        }
+    }
+}
