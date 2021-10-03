@@ -1,74 +1,74 @@
 {
     "qna": {
         "qna1": {
-          "correctA": "negr1C",
-          "incorrectA1": "negr1I1",
-          "incorrectA2": "negr1I2",
-          "incorrectA3": "negr1I3",
-          "question": "Jsi negr1"
+          "correctA": "Málo",
+          "incorrectA1": "Hodně",
+          "incorrectA2": "Nevim",
+          "incorrectA3": "Něco mezi",
+          "question": "Jak je vysokej tranko?"
         },
         "qna2": {
-          "correctA": "negr2C",
-          "incorrectA1": "negr2I1",
-          "incorrectA2": "negr2I2",
-          "incorrectA3": "negr2I3",
-          "question": "Jsi negr2"
+          "correctA": "nn",
+          "incorrectA1": "jj",
+          "incorrectA2": "Kdo je achkare",
+          "incorrectA3": "To jde úplně mimo mě",
+          "question": "Unban achkare?"
         },
         "qna3": {
-          "correctA": "negr3C",
-          "incorrectA1": "negr3I1",
-          "incorrectA2": "negr3I2",
-          "incorrectA3": "negr3I3",
-          "question": "Jsi negr3"
+          "correctA": "SUS IMPOSTOR Z AMOGUSU",
+          "incorrectA1": "achkare",
+          "incorrectA2": "ten kdo ventuje",
+          "incorrectA3": "ja",
+          "question": "Kdo je impostor?"
         },
         "qna4": {
-          "correctA": "negr4C",
-          "incorrectA1": "negr4I1",
-          "incorrectA2": "negr4I2",
-          "incorrectA3": "negr4I3",
-          "question": "Jsi negr4"
+          "correctA": "TempleOS",
+          "incorrectA1": "Windows 98",
+          "incorrectA2": "Štemberkovi linuxi",
+          "incorrectA3": "ImpostorOS",
+          "question": "Jméno nejlepšího operačního systému"
         },
         "qna5": {
-          "correctA": "negr5C",
-          "incorrectA1": "negr5I1",
-          "incorrectA2": "negr5I2",
-          "incorrectA3": "negr5I3",
-          "question": "Jsi negr5"
+          "correctA": "Zažiješ ameriku",
+          "incorrectA1": "Bude ti zima",
+          "incorrectA2": "Někdo ti je ukradne",
+          "incorrectA3": "Zase si je nandáš",
+          "question": "Co se stane když sundáš boty?"
         },
         "qna6": {
-          "correctA": "negr6C",
-          "incorrectA1": "negr6I1",
-          "incorrectA2": "negr6I2",
-          "incorrectA3": "negr6I3",
-          "question": "Jsi negr6"
+          "correctA": "Matěj Kratyl",
+          "incorrectA1": "Kája Gottů",
+          "incorrectA2": "tvoje máma XDXDXDXD",
+          "incorrectA3": "achkare",
+          "question": "Kdo je zlatej kluk?"
         },
         "qna7": {
-          "correctA": "negr7C",
-          "incorrectA1": "negr7I1",
-          "incorrectA2": "negr7I2",
-          "incorrectA3": "negr7I3",
-          "question": "Jsi negr7"
+          "correctA": "4",
+          "incorrectA1": "15",
+          "incorrectA2": "28",
+          "incorrectA3": "32",
+          "question": "Kolik má auto kol?"
         },
         "qna8": {
-          "correctA": "negr8C",
-          "incorrectA1": "negr8I1",
-          "incorrectA2": "negr8I2",
-          "incorrectA3": "negr8I3",
-          "question": "Jsi negr8"
+          "correctA": "Tomáši",
+          "incorrectA1": "Něco s kontinentama",
+          "incorrectA2": "Vždycky bokem",
+          "incorrectA3": "Nevim",
+          "question": "Co říka teorie kontinentálního driftu"
         },
         "qna9": {
-          "correctA": "negr9C",
-          "incorrectA1": "negr9I1",
-          "incorrectA2": "negr9I2",
-          "incorrectA3": "negr9I3",
-          "question": "Jsi negr9"
+          "correctA": "ANO",
+          "incorrectA1": "ne",
+          "incorrectA2": "možna",
+          "incorrectA3": "trochu",
+          "question": "Je Javascript špatnej jazyk?"
         },
         "qna10": {
-          "correctA": "negr10C",
-          "incorrectA1": "negr10I1",
-          "incorrectA2": "negr10I2",
-          "incorrectA3": "negr10I3",
-          "question": "Jsi negr10"
+          "correctA": "Všichni",
+          "incorrectA1": "4",
+          "incorrectA2": "15",
+          "incorrectA3": "28",
+          "question": "Kolik ukrajincu bylo dneska před kaufem?"
         }  
     }
 }
