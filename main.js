@@ -101,7 +101,7 @@ let shuffleArray = (arr) => {
   arr.sort(() => Math.random() - 0.5);
 }
 
-//When you click on any answers chcecks if you've won and if you've answered the question correctly
+//When you click on any answers chcecks if you've answered the question correctly and if you've won
 answers.forEach(element => {
   element.onclick = () => {
     checkAnswer(element.innerText, questionValue);
