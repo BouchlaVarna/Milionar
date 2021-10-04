@@ -9,6 +9,7 @@ let answersUsed = [0];
 let answersOnly = [];
 let won = false;
 
+//Async function with parameter i(gets qna + i from json), returns array
 const jsonToArray = (i) => {
   j = 0;
   let fetchQnA = async (i) => {
@@ -28,10 +29,12 @@ const jsonToArray = (i) => {
   }
 }
 
+//Random num fce, here just so its more readible
 const randomNum = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//Checks if the generated answer is used, if so, generates new i for jsonToArray()
 const checkIfUsed = (min, max) => {
   let num = randomNum(min, max);
   for (let i = 0; i < answersUsed.length; i++) {
@@ -44,6 +47,7 @@ const checkIfUsed = (min, max) => {
   return num;
 }
 
+//Takes the imported qna set in form of array and puts it into html
 let qnaGen = () => {
   for (let i = 0; i < answers.length; i++) {
     answersOnly[i] = answers[i];
@@ -56,6 +60,7 @@ let qnaGen = () => {
   question.innerText = questsAndAns[4];
 }
 
+//Checks if clicked answer is the correct one
 let checkAnswer = (answer, correctAnswer) => {
   jsonToArray(checkIfUsed(1, 10));
   qnaGen();
@@ -67,6 +72,7 @@ let checkAnswer = (answer, correctAnswer) => {
   resetGame();
 }
 
+//Call this to reset the progress of the current game
 let resetGame = () => {
   answersUsed = [0];
   currentPrize = prizes.length;
@@ -75,6 +81,7 @@ let resetGame = () => {
   });
 }
 
+//If you've reached the required number of questions answered correctly (9), ends and resets the game
 let winningConditionCheck = () => {
   let winningNum = 9
   if(!won) { winningNum = 10 };
@@ -89,10 +96,12 @@ let winningConditionCheck = () => {
   }
 }
 
+//Shuffles the answers
 let shuffleArray = (arr) => {
   arr.sort(() => Math.random() - 0.5);
 }
 
+//When you click on any answers chcecks if you've won and if you've answered the question correctly
 answers.forEach(element => {
   element.onclick = () => {
     checkAnswer(element.innerText, questionValue);
