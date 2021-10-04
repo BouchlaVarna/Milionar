@@ -109,6 +109,5 @@ answers.forEach(element => {
   }
 });
 
-window.onload = () => {
-  jsonToArray(checkIfUsed(1, 10));
-}; 
+window.onload = () => jsonToArray(checkIfUsed(1, 10));
+
