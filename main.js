@@ -10,23 +10,24 @@ let answersOnly = [];
 let won = false;
 
 //Async function with parameter i(gets qna + i from json), returns array
-const jsonToArray = (i) => {
+const jsonToArray = async (i) => {
   j = 0;
-  let fetchQnA = async (i) => {
-    fetchFile = await fetch('qna.json');
-    let data = await fetchFile.json();
-  
-    createQnA(data, i);
-  }
-  
-  fetchQnA(i);
-  
   let createQnA = (data, i) => {
     for (const key in data["qna"][`qna${i}`]) {
-      questsAndAns[j] = (data["qna"][`qna${i}`][key]);
+      questsAndAns[j] = data["qna"][`qna${i}`][key];
       j++;
     }
   }
+
+  let fetchQnA = async (i) => {
+    fetchFile = await fetch('qna.json');
+    let data = await fetchFile.json();
+
+    await createQnA(data, i);
+    await qnaGen();
+  }
+  
+  await fetchQnA(i);
 }
 
 //Random num fce, here just so its more readible
@@ -56,14 +57,13 @@ let qnaGen = () => {
   for (let i = 0; i < answersOnly.length; i++) {
     answersOnly[i].innerText = questsAndAns[i];
   }
-  questionValue = questsAndAns[0]
+  questionValue = questsAndAns[0];
   question.innerText = questsAndAns[4];
 }
 
 //Checks if clicked answer is the correct one
 let checkAnswer = (answer, correctAnswer) => {
   jsonToArray(checkIfUsed(1, 10));
-  qnaGen();
   if(answer == correctAnswer){
     currentPrize--;
     prizes[currentPrize].style.backgroundColor = 'blue';
@@ -109,4 +109,5 @@ answers.forEach(element => {
   }
 });
 
-window.onload = qnaGen, jsonToArray(checkIfUsed(1, 10)); 
+window.onload = () => jsonToArray(checkIfUsed(1, 10));
+
